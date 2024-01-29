@@ -41,23 +41,23 @@ const HomePage = () => {
 
   return (
     <div className="bg-gray-50">
-      <header className="p-6 max-w-6xl mx-auto">
-        <div className="page-logo font-extrabold text-xl">LockChime</div>
+      <header className="mx-auto max-w-6xl p-6">
+        <div className="text-xl font-extrabold">LockChime</div>
       </header>
-      <main className="max-w-6xl mx-auto">
-        <div className="page-title-and-description p-10 md:p-20 text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-2">LockChime</h1>
-          <p className="text-lg md:text-xl text-gray-600">The place you can find your lock chime</p>
+      <main className="mx-auto max-w-6xl">
+        <div className="p-10 text-center md:p-20">
+          <h1 className="mb-2 text-5xl font-extrabold md:text-6xl">LockChime</h1>
+          <p className="text-lg text-gray-600 md:text-xl">The place you can find your lock chime</p>
         </div>
-        <div className="chime-items p-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-12 p-6 md:grid-cols-2">
           {chimes.map(chime => (
             <div
               key={chime.id}
-              className="chime-item group/item border bg-white border-gray-100 rounded-xl overflow-hidden"
+              className="group/item overflow-hidden rounded-xl border border-gray-100 bg-white"
               style={{ boxShadow: 'rgba(0, 0, 0, 0.25) 0px 10px 30px -20px' }}
             >
               <Player audioUrl={chime.audioUrl} imageUrl={chime.imageUrl} />
-              <div className="chime-title-and-description p-6">
+              <div className="p-6">
                 <h2 className="text-2xl font-bold">{chime.title}</h2>
                 <p className="text-gray-600">{chime.description}</p>
               </div>
@@ -68,7 +68,7 @@ const HomePage = () => {
           <p>Subscribe for more lock chime</p>
         </div>
       </main>
-      <footer className="p-6 md:p-12 bg-gray-950 text-gray-100 text-center">CopyLeft @ LockChime</footer>
+      <footer className="bg-gray-950 p-6 text-center text-gray-100 md:p-12">CopyLeft @ LockChime</footer>
     </div>
   )
 }
