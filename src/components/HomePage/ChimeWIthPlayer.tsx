@@ -5,9 +5,9 @@ import PlayerIcon from '@/components/HomePage/PlayerIcon'
 import type { Chime } from '@/components/HomePage/types'
 import type AudioPlayer from '@/components/HomePage/AudioPlayer'
 
-const ChimeWIthPlayer = ({ chime, player }: { chime: Chime; player: AudioPlayer }) => {
+const ChimeWIthPlayer = ({ chime, player }: { chime: Chime; player?: AudioPlayer }) => {
   const playerClicked = (audioUrl: string) => {
-    player.play(audioUrl)
+    player?.play(audioUrl)
   }
 
   return (
