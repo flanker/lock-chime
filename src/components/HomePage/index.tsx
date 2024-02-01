@@ -14,11 +14,18 @@ const HomePage = () => {
         <div className="grid grid-cols-1 gap-12 p-6 md:grid-cols-2">
           <ChimesWithPlayer />
         </div>
-        <div className="p-6 text-center">
-          <p>Subscribe for more lock chime</p>
+        <div className="flex justify-center gap-4 p-16 text-center">
+          <input
+            type="text"
+            placeholder="Subscribe for more lock chime"
+            className="input input-bordered w-full max-w-xs"
+          />
+          <button className="btn btn-primary">Subscribe</button>
         </div>
       </main>
-      <footer className="bg-gray-950 p-6 text-center text-gray-100 md:p-12">CopyLeft @ LockChime</footer>
+      <footer className="footer footer-center bg-neutral p-10 text-neutral-content md:p-12">
+        CopyLeft @ LockChime
+      </footer>
     </div>
   )
 }
